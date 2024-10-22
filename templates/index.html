@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Reconnaissance Faciale</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 100px;
+            max-width: 600px;
+        }
+        .card {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+        label {
+            font-weight: bold;
+        }
+        .btn {
+            background-color: #0d6efd;
+            border: none;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: #0b5ed7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reconnaissance Faciale</h1>
+        <div class="card p-4">
+            <form action="/process" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="face_image">Image de visage (vue de face) :</label>
+                    <input type="file" id="face_image" name="face_image" accept="image/*" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="database_folder">Dossier de la base de données :</label>
+                    <input type="text" id="database_folder" name="database_folder" class="form-control"
+                           placeholder="Ex: C:/chemin/dossier_principal" required>
+                </div>
+                <div class="mb-3">
+                    <label for="results_folder_path">Chemin du dossier de résultats :</label>
+                    <input type="text" id="results_folder_path" name="results_folder_path" class="form-control"
+                           placeholder="Ex: C:/chemin/vers/dossier" required>
+                </div>
+                <div class="mb-3">
+                    <label for="results_folder_name">Nom du dossier de résultats :</label>
+                    <input type="text" id="results_folder_name" name="results_folder_name" class="form-control"
+                           placeholder="Nom_du_dossier" required>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Lancer la Reconnaissance</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

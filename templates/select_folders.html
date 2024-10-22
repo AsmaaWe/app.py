@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Folders</title>
+</head>
+<body>
+    <h1>Select Database Folder</h1>
+    <form action="/select_folders/{{ filename }}" method="post">
+        <label for="database_folder">Database Folder Path:</label>
+        <input type="text" id="database_folder" name="database_folder" required>
+        <button type="submit">Process</button>
+    </form>
+</body>
+</html>
